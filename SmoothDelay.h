@@ -73,9 +73,12 @@ public:
         
         readSamples(block);
         
-        for (int c = 0; c < block.getNumChannels(); ++c)
+        if (feedback != 0.f)
         {
-            feedbackBuffer.addFromWithRamp(c, 0, block.getChannelPointer(c), (int)block.getNumSamples(), feedback, feedback);
+            for (int c = 0; c < block.getNumChannels(); ++c)
+            {
+                feedbackBuffer.addFromWithRamp(c, 0, block.getChannelPointer(c), (int)block.getNumSamples(), feedback, feedback);
+            }
         }
         auto feedbackBlock = dsp::AudioBlock<float>(feedbackBuffer);
         
