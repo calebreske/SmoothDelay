@@ -1,12 +1,12 @@
-# LICENSE
+# License
 This project is licensed under the terms of the MIT license.
 
-# DESCRIPTION
+# Description
 This is a very simple and lightweight delay-line class for JUCE I built as part of a larger project I'm working on. I wanted the delay to have a smooth tape-like varispeed transition, so that changing the delay time wouldn't result in nasty clicking. I couldn't find anything like this online, so I decided to make one myself! Figured it could be useful to anyone looking for something similar.
 
 If there is any demand whatsoever, I'm happy to make a version compatible with any framework, not just JUCE. If you have any questions just send me an email at calebreske@gmail.com.
 
-# USAGE
+# Usage
 Simply include SmoothDelay.h in your processor, declare a SmoothDelay instance, prepare, and process!
 
 ex.
