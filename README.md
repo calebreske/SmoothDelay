@@ -34,16 +34,15 @@ delay.process(block);
 
 Public member functions for the class SmoothDelay:
 
-```
 void prepare(size_t sampleRate, int blockSize, int numChannels, float maxDelayTimeSeconds)
-    sampleRate - the desired audio sample rate
-    blockSize - the maximum input block size
-    numChannels - the number of channels in each block
-    maxDelayTimeSeconds - the maximum number of seconds the delay will ever need to accomodate. This is needed to initialize the ring buffer.
+- sampleRate - the desired audio sample rate
+- blockSize - the maximum input block size
+- numChannels - the number of channels in each block
+- maxDelayTimeSeconds - the maximum number of seconds the delay will ever need to accomodate. This is needed to initialize the ring buffer.
 prepare() must be called before any other functions.
 
 void process(AudioBlock<T>& block)
-    block - the input block of type T
+- block - the input block of type T
 Delay the signal by maxDelayTimeSeconds, incorporating feedback.
     
 void readSamples(AudioBlock<T>& block)
@@ -68,4 +67,3 @@ Returns the current delay time, in seconds.
     
 float getFeedback()
 Returns the current feedback value.
-```
