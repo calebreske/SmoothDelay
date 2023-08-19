@@ -40,12 +40,10 @@ void prepare(size_t sampleRate, int blockSize, int numChannels, float maxDelayTi
     blockSize - the maximum input block size
     numChannels - the number of channels in each block
     maxDelayTimeSeconds - the maximum number of seconds the delay will ever need to accomodate. This is needed to initialize the ring buffer.
-    
 prepare() must be called before any other functions.
 
 void process(AudioBlock<T>& block)
     block - the input block of type T
-    
 Delay the signal by maxDelayTimeSeconds, incorporating feedback.
     
 void readSamples(AudioBlock<T>& block)
