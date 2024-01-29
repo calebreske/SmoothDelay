@@ -35,6 +35,6 @@ delay.setFeedback(newFeedback);
 # Other
 Constants can be set in the SingleChannelDelay.h file:
 - maxDelayLength: the maximum number of seconds the class will ever need to delay
-- minReadHeadSpeed: the minimum speed of the read head when changing delay times (setting this to negative will allow the read head to play backwards to reach its target faster). For example, a value of 2 allows the read head to play an octave above the original signal.
-- maxReadHeadSpeed: the maximum speed the read head is allowed to move
+- minReadHeadSpeed: the minimum speed of the read head when changing delay times (setting this to negative will allow the read head to play backwards to reach its target faster).
+- maxReadHeadSpeed: the maximum speed the read head is allowed to move. For example, a value of 2 allows the read head to play an octave above the original signal.
 - timeConstant: how fast the delay time will smoothly change. I've found a time constant around 3 sounds good to my ears.
